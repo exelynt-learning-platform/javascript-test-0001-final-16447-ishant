@@ -1,15 +1,15 @@
  const n = 5; 
-    for (let i = 1; i <= (2 * n - 1); i++) {
-  let row = "";
- let dist = i <= n ? n - i : i - n;
-  let width = 2 * n - 1;
- for (let j = 0; j < width; j++) {
-   let leftStar = dist;
-     let rightStar = width - dist - 1;
- if (j === leftStar || j === rightStar) {
-            row += "*";
+  for (let i = 1; i <= (2 * n - 1); i++) {
+   let rows = "";
+ let distances = i <= n ? n - i : i - n;
+  let widths = 2 * n - 1;
+ for (let j = 0; j < widths; j++) {
+    let leftstars = distances;
+     let rightstars = widths - distances - 1;
+ if (j === leftstars || j === rightstars) {
+            rows += "*";
         } else {
-            row += " ";
-        }    }
-   console.log(row);
+            rows += " ";
+ }    }
+   console.log(rows);
 }
